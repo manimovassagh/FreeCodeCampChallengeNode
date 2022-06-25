@@ -5,10 +5,10 @@ console.log('Hello World');
 
 app.get('/', (req, res) => {
 
-  res.sendFile('views/index.html');
+  res.sendFile(__dirname+'/views/index.html');
 })
 
-
+console.log(__dirname+'/views/index.html');
 
 
 
