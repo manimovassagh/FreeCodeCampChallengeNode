@@ -11,20 +11,19 @@ app.get('/', (req, res) => {
  app.use("/public",express.static(__dirname + "/public"));
 
 
- function convertToUppercase(){
-  if(process.env.MESSAGE_STYLE == 'uppercase'){
-    return "Hello json".toUpperCase();
-  } else {
-    return "Hello json";
-  }
-  return 
- }
+ 
  app.get('/json', (req, res) => {
 
-      res.json(convertToUppercase());
-    
+  if (process.env.MESSAGE_STYLE === "uppercase") {
+    res = "Hello World".toUpperCase();
+  } else {
+    res = "Hello World";
+  }
+  res.send(res);
+  
 })
-console.log(process.env.MESSAGE_STYLE == 'uppercase');
+
+
 
 
 
