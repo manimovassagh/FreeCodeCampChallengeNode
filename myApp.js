@@ -16,10 +16,11 @@ app.get('/', (req, res) => {
 
     res.json({"message": "HELLO JSON"});
 
-  } else{
+  } 
+  // else{
 
-    res.json({"message": "Hello json"});
-  }
+  //   res.json({"message": "Hello json"});
+  // }
 })
 
 
